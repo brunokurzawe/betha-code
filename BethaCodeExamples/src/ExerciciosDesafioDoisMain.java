@@ -36,7 +36,7 @@ public class ExerciciosDesafioDoisMain {
                         System.out.println("Sexta");
                         break;
                     case 7:
-                        System.out.println("Sexta");
+                        System.out.println("Sabado");
                         break;
                     default:
                         System.out.println("Dia da semana inexistente!");
@@ -74,8 +74,8 @@ public class ExerciciosDesafioDoisMain {
                 int x = 10;
 
                 while (y <= 20) {
-                    y++;
-                    System.out.println(x);
+                    y++; //1 2 3
+                    System.out.println(x); //10 11 12
                     x++;
                 }
 
@@ -85,9 +85,9 @@ public class ExerciciosDesafioDoisMain {
                 boolean executa = true;
                 int w = 10;
                 while (executa) {
-                    System.out.println(">>" + w);
+                    System.out.println(">>" + w); //10 11 12.......29
                     if (w == 29) executa = false;
-                    w++;
+                    w++; //30
                 }
 
                 /*
@@ -96,7 +96,7 @@ public class ExerciciosDesafioDoisMain {
                 int v = 10;
 
                 while (v < 30) {
-                    System.out.println(">>>>" + v);
+                    System.out.println(v); //10 11 12 13....29
                     v++;
                 }
                 break;
@@ -112,7 +112,7 @@ public class ExerciciosDesafioDoisMain {
                 do {
                     a++;
 
-                    System.out.println(b);
+                    System.out.println(b); //MIOLO
 
                     b++;
                 } while (a <= 20);
@@ -150,14 +150,17 @@ public class ExerciciosDesafioDoisMain {
                  * Solução proposta numero 01
                  * */
                 String invertido = "";
-                for (int i = numeroInverterNovo.length() - 1; 0 <= i; i--) {
-                    invertido += numeroInverterNovo.charAt(i);
+                                               //(4 - 1) = 3 2 1 0
+                for (int i = numeroInverterNovo.length() - 1; 0 <= i; i--) { /// "1  2  3  4 "
+                    invertido += numeroInverterNovo.charAt(i); //6 7 8 9
+                    System.out.println(">>" + invertido);
                 }
-                System.out.println(invertido);
+                System.out.println(invertido); //6 7 8 9
 
                 /*
                  * Solução proposta numero 02
                  * */
+
                 String numeroInvertido2 = "";
                 for (int i = numeroInverterNovo.length(); i > 0; i--) {
                     numeroInvertido2 += numeroInverterNovo.substring(i - 1, i);
@@ -169,10 +172,10 @@ public class ExerciciosDesafioDoisMain {
                  * */
                 int invertidoX = 0;
                 int numeroX = Integer.parseInt(numeroInverterNovo);
-                while (numeroX != 0 ) {
+                while (numeroX != 0) {
                     invertidoX = invertidoX * 10;
-                    invertidoX = invertidoX + (numeroX%10);
-                    numeroX = numeroX/10;
+                    invertidoX = invertidoX + (numeroX % 10);
+                    numeroX = numeroX / 10;
                 }
                 System.out.println("Invertido: " + invertidoX);
 
@@ -185,7 +188,21 @@ public class ExerciciosDesafioDoisMain {
                     inv = 10 * inv + numeroS % 10;
                     numeroS /= 10;
                 }
-                System.out.println(">>>>>>"+inv);
+                System.out.println(">>>>>>" + inv);
+
+                /*
+                 * Solução proposta numero 05
+                 * */
+                Integer aa = new Integer(1234);
+                String bb = aa.toString();
+                String c = "";
+
+                for (int i=bb.length(); i > 0; i--) {
+                    c += bb.substring(i - 1, i);
+                    System.out.println("-->" + c);
+                }
+
+                System.out.println("Número invertido:" + c);
 
                 break;
             case 5:
@@ -199,6 +216,7 @@ public class ExerciciosDesafioDoisMain {
                 double B = 1.80;
                 double area = (h * (b1 + B)) / 2;
                 System.out.println("imprime: Area trapezio:" + area);
+
 
                 /*
                  * Solução proposta numero 02
@@ -236,7 +254,8 @@ public class ExerciciosDesafioDoisMain {
                  * Solução proposta numero 01
                  * */
                 for (int i = 15; i <= 35; i++) {
-                    if (i%2 == 0) {
+                    if (i % 2 == 0) {
+                        System.out.println(" é par:" + i);
                         continue;
                     }
                     System.out.println(i + " >> " + (int) i * i);
@@ -246,10 +265,9 @@ public class ExerciciosDesafioDoisMain {
                  * Solução proposta numero 02
                  * */
                 for (int i = 15; i <= 35; i++) {
-                    if (i%2 == 0) {
-                        continue;
+                    if (i % 2 != 0) {
+                        System.out.println(i + " >>>> " + (int) Math.pow(i, 2));
                     }
-                    System.out.println(i + " >>>> " + (int) Math.pow(i, 2));
                 }
 
                 /*
@@ -257,10 +275,8 @@ public class ExerciciosDesafioDoisMain {
                  * */
                 for (int xa = 15; xa <= 35; xa++) {
                     if (xa % 2 != 0) {
-                        int ya = 0;
-                        ya = (xa * xa);
-                        System.out.println(xa + " é um número ímpar e o seu quadrado é " + ya);
-                    } else {		//retirando esse else, não imprime os números pares
+                        System.out.println(xa + " é um número ímpar e o seu quadrado é " + (xa * xa));
+                    } else {        //retirando esse else, não imprime os números pares
                         System.out.println(xa + " é um número par");
                     }
                 }
@@ -269,13 +285,12 @@ public class ExerciciosDesafioDoisMain {
                  * Solução proposta numero 04
                  * */
                 int ia = 15;
-                while (ia<=35) {
-                    if (ia%2!=0) {
-                        System.out.println("O quadrado do número " + ia + " é igual a "+ ia*ia);
+                while (ia <= 35) {
+                    if (ia % 2 != 0) {
+                        System.out.println("O quadrado do número " + ia + " é igual a " + ia * ia);
                     }
                     ia++;
                 }
-
                 break;
             default:
                 System.out.println("Exercicio Invalido");

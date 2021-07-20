@@ -34,7 +34,14 @@ public class OrdenacaoArrayMain {
         //armazena o tempo de inicio da ordenacao
         inicio = System.currentTimeMillis();
         //Ordena utilizando a classe Arrays
+
+
+
         Arrays.sort(arrayInteiros);
+
+
+
+
         //armazena o tempo fim da ordenacao
         fim = System.currentTimeMillis();
         //Imprime o tempo total de ordenacao
