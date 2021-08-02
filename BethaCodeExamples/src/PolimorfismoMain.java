@@ -2,6 +2,9 @@ public class PolimorfismoMain {
 
 
     public static void main(String[] args) {
+
+        Veiculo veiculo2 = new Moto();
+
         Veiculo veiculo = VeiculoBuilder.criaVeiculo("CARRO");
         veiculo.ligar();
     }
@@ -17,7 +20,7 @@ public class PolimorfismoMain {
         }
     }
 
-    public static class Veiculo {
+    public abstract static class Veiculo {
         public void ligar() {
             System.out.println("Veiculo ligando!!");
         }
