@@ -15,10 +15,10 @@ public class Aluno implements Comparable<Aluno>{
         return this.nome.compareTo(aluno.getNome());
     }
 
-    public boolean equals(Object o) {
-        Aluno a = (Aluno) o;
-        return this.nome.equals(a.getNome());
-    }
+//    public boolean equals(Object o) {
+//        Aluno a = (Aluno) o;
+//        return this.nome.equals(a.getNome());
+//    }
 
     public int hashCode() {
         return this.nome.hashCode();

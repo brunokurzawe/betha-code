@@ -11,7 +11,7 @@ public class ExceptionMain {
         //dividePorZeroTratado();
 
         //elementoNoArrayInexistente();
-        //elementoNoArrayInexistentTratado();
+        elementoNoArrayInexistentTratado();
 
         //classeNaoEncontrada();
         //classeNaoEncontradaTratado();

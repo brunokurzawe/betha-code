@@ -38,7 +38,7 @@ public class ServerSidePreparedStatement {
 
         //Busca por id
         PreparedStatement statement3 = conn.prepareStatement("SELECT * FROM clientes WHERE id = ?");
-        statement3.setLong(2, 1);
+        statement3.setLong(1, 1);
         ResultSet resultSet3 = null;
         resultSet3 = statement3.executeQuery();
 
